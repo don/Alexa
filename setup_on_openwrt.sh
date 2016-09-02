@@ -1,7 +1,7 @@
 
 
 CURRENT_DIR="$( pwd )"
-SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+SCRIPT_DIR="$( cd "$( dirname "$[0]" )" && pwd )"
 
 cd $SCRIPT_DIR
 
@@ -12,8 +12,6 @@ if [ ! -d respeaker ]; then
 fi
 
 echo 'Install required python packages'
-pip install -r CherryPy requests
+pip install CherryPy requests
 
 cd $CURRENT_DIR
-
-
